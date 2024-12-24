@@ -9,24 +9,30 @@ body{
     justify-content: space-evenly;
     align-items: center;
 }
-.btn{
+/* .btn{
   color: rgb(10, 20, 20);  
   font-size:20px;
   padding: 15px;
   margin-top: 10px;
   width: 80px;
   border: 2px solid black;
-  background-color: rgb(13, 166, 186);
-  border-radius: 10px;
+  background-color: rgb(42, 89, 230);
+  border-radius: 5px;
+  margin-left: 150px;
+  color: white;
   
   
-}
+  
+  
+} */
+
+
 .todo{
     display: flex;
     flex-direction: column;
     padding: 20px;
     justify-content: center;
-    background: rgb(241, 240, 239);
+    background: rgb(221, 188, 155);
     border-radius: 1rem;
     height: 50%;
     width: 60%;
@@ -45,12 +51,14 @@ input{
    position: relative;
 }
 .input-filed{
-    width: 300px;
+    width: 400px;
     height: 30px;
     padding: 8px;
     border: 1px solid black;
-    border-radius: 10px;
+    border-radius: 5px;
     font-size: 1rem;
+    background-color: rgb(252, 252, 252);
+    
 }
 ul{
     padding: 0;
@@ -64,9 +72,10 @@ li{
     padding: 5px;
 }
 .counter{
-    border: 0.06rem solid black;
-    width: 400px;
-
+  color: rgba(0, 0, 0, 0.568);
+  width: 300PX;
+  margin-top: 100px;
+  
 }
 .counter-container{
     display: flex;
@@ -91,6 +100,17 @@ li{
     background-color: azure;
     padding: 10px;
     border-radius: 10px;
+    text-transform: uppercase;
     
 
+}
+.btn{
+    margin-top: 50px;
+    margin-left: 150px;
+    height: 40px;
+    width: 80px;
+    background-color: #80C4E9;
+    border-radius: 5px;
+    font-weight: 700;
+    color: rgb(0, 1, 2);
 }

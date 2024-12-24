@@ -6,9 +6,9 @@ const todoCount = document.getElementById("todoCount");
 const addButton = document.querySelector(".btn");
 const deleteButton = document.getElementById("deleteButton");
 
-document.addEventListener("DOMContentLoaded", function() {
+document.addEventListener("DOMContentLoaded", function () {
     addButton.addEventListener("click", addTask);
-    todoInput.addEventListener("keydown", function(event) {
+    todoInput.addEventListener("keydown", function (event) {
         if (event.key === "Enter") {
             event.preventDefault(); // Prevents the default action of Enter key (like form submission)
             addTask();
@@ -16,11 +16,11 @@ document.addEventListener("DOMContentLoaded", function() {
     });
     deleteButton.addEventListener("click", deleteAllTasks);
 
-    displayTask(); 
+    displayTask();
 });
 
 function addTask() {
-    const newTask = todoInput.value.trim(); 
+    const newTask = todoInput.value.trim();
     if (newTask !== "") {
         todo.push({
             text: newTask,
@@ -36,12 +36,12 @@ function deleteAllTasks() {
 }
 
 function saveToLocalStorage() {
-    localStorage.setItem("todo", JSON.stringify(todo)); // Store the updated tasks in localStorage
+    localStorage.setItem("todo", JSON.stringify(todo)); 
 }
 
 
 function deleteTask(index) {
     todo.splice(index, 1); // Remove the task at the specified index
-    saveToLocalStorage(); // Save the updated tasks to localStorage
+    saveToLocalStorage(); // Save the updated tasks to localStorage 
     renderTasks(); // Update the UI after deletion
 }
