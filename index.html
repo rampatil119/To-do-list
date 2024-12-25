@@ -3,37 +3,24 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>project</title>
+  <title>To-Do list project</title>
   <link rel="stylesheet" href="style.css">
-
   <script src="script.js"></script>
-
 </head>
 <body>
-<section class="todo">
-  <h2>To-do list</h2>
-  <div class="input">
-    <input type="text" class="input-filed" id="todoInput" placeholder="Add new todo"> <button type="button" id="addbtn" class="btn">Add</button>
-  
-  <ul class="scroll">
-    <li id="todolist">
+  <div class="container">
+    <div class="input-container">
+      <h1>My To Do List</h1>
+      <input type="text" placeholder="add a new to do.." id="inputBox">
 
-    </li>
-  </ul>
-  <div>
-    <hr class="counter">
-    <div class="counter-container">
-      <p><span>0</span>item total</p>
-      <button id="deleteButton">Delete All</button>
+      <input type="button" value="Add" id="addBtn">
+      <button type="submit" id="sub">submit</button>
+      <ul class="todoList" id="todoList">
+        <li>task1</li>
+        <li>task2</li>
+        <li>task3</li>
+      </ul>
     </div>
-  </div>
- 
-</section>
-<footer>
-  <div class="footer">
-    <p class="made-by">made by</p>
-    <p class="author">rameshwar patil</p>
-  </div>
-</footer>
+  
 </body>
 </html>
