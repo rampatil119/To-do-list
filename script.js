@@ -1,17 +1,51 @@
-const inputBox=document.getElementById('inputBox');
-const addBtn=document.getElementById('addBtn');
-const todoList=document.getElementById('todoList');
-const sub=document.getElementById('sub')
+const inputBox = document.getElementById('inputBox');
+const addBtn = document.getElementById('addBtn');
+const todoList = document.getElementById('todoList');
 
 
 
-const add=()=>{
-    alert("hello ram")
+
+const addTodo = () => {
+    const inputText = inputBox.value.trim();
+    if (inputText.length <= 0) {
+        alert("write some text")
+    }
+
+
+    const li = document.createElement('li')
+    const p = document.createElement('p')
+    p.innerHTML = inputText;
+    li.appendChild(p)
+    todoList.appendChild(li)
+
+    const deleteBtn = document.createElement('button')
+    deleteBtn.innerHTML = "Remove";
+    deleteBtn.classList.add('btn', 'deleteBtn')
+    li.appendChild(deleteBtn)
+
+
+    const editBtn = document.createElement('editBtn')
+    editBtn.innerHTML = "Edit"
+    editBtn.classList.add('btn', 'editBtn')
+    li.appendChild(editBtn)
+
+
+    inputBox.value = ""
+}
+const update = (e) => {
+    if (e.target.innerHTML === "Remove") {
+        todoList.removeChild(e.target.parentElement)
+    }
+    if (e.target.innerHTML === "Edit") {
+        inputBox.value = e.target.previousElementSibling.innerHTML;
+        inputBox.focus()
+        addBtn.value = "edit"
+
+    }
 }
 
-sub.addEventListener('click',add)
 
-addBtn.addEventListener('click',addTodo)
-
+addBtn.addEventListener('click', addTodo)
+todoList.addEventListener('click', update)
 
 
