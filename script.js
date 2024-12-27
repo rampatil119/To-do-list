@@ -31,6 +31,8 @@ const addTodo = () => {
 
 
     inputBox.value = ""
+
+    saveLocalTodo(inputText)
 }
 const update = (e) => {
     if (e.target.innerHTML === "Remove") {
@@ -44,7 +46,12 @@ const update = (e) => {
     }
 }
 
-
+const saveLocalTodo=(todo)=>{
+    console.log(todo);
+    let todos=[];
+    todos.push(todo)
+    console.log(todos);
+}
 addBtn.addEventListener('click', addTodo)
 todoList.addEventListener('click', update)
 
