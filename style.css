@@ -93,6 +93,6 @@ ul li p{
     color: #3da33d;
 }
 ul li:hover{
-
+      font-size: medium;
     background-color:rgb(216, 194, 194) ;
 }
